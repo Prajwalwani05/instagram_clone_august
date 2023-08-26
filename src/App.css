@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: 2.8rem;
+}
+:root{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  background-color: #13131A;
+  color: #F5F0F0;
+}

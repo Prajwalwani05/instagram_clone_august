@@ -1,0 +1,23 @@
+.dashboardContainer {
+    & p{
+        font-size: 2rem;
+        font-weight: 500;
+        & span{
+            margin-left: 1rem;
+        }
+    }
+    & h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+        opacity: .8;
+    }
+}
+.posts{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+
+    & img{
+        max-width: 100%;
+        height: auto;
+    }
+}
