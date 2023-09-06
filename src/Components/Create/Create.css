@@ -1,0 +1,51 @@
+.Create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.createContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h1{
+        padding: 3rem;
+        font-size: 2rem;
+        font-family: cursive;
+        color: violet;
+    }
+
+    .uploadInput::-webkit-file-upload-button{
+    visibility: hidden;
+    }
+    .uploadInput:before{
+        content: 'Select some files';
+        display: inline-block;
+        white-space: nowrap;
+        cursor: pointer;
+        font-weight: 500;      
+    }
+    .uploadBtn{
+        padding: 0 2rem;
+        font-weight:500;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid transparent;
+        font-family:cursive;
+        cursor: pointer;
+    }
+
+    & .imageDiv{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 2rem;
+    padding: 4rem;
+    }
+}
+
+.uploadImg{
+    object-fit: cover;
+}

@@ -1,23 +1,111 @@
+body::-webkit-scrollbar{
+    background-color: gray;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+}
 .dashboardContainer {
-    & p{
+    padding: 1rem;
+    /* border: 1px solid red; */
+    .greetDiv{
+        padding: 2rem;
+        padding-bottom:0;
+        
+        /* border: 1px solid blue; */
+    }
+    & .greet{
+        text-align: center;
         font-size: 2rem;
         font-weight: 500;
         & span{
             margin-left: 1rem;
         }
     }
-    & h3{
+    & .message{
+        text-align: center;
         font-size: 1.5rem;
         font-weight: 400;
         opacity: .8;
     }
 }
+
 .posts{
+    padding: 2rem;
+    gap: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    /* border: 1px solid green; */
+
+    & .post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    & .postImg{
+        /* border: 1px solid red; */
+        padding: .5rem;
+        /* width: 40rem; */
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     & img{
         max-width: 100%;
-        height: auto;
+        max-height: 100%;
+        object-fit: contain;
     }
+    .postContent{
+        display: flex;
+        justify-content: space-between;
+        /* gap: 11rem; */
+        padding: 1rem 2.5rem;
+        padding-bottom: 0;
+        /* margin: .5rem auto; */
+        
+    }
+    
 }
+.message{
+    width: 70ch;
+    line-height: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.3rem !important;
+}
+.greetDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.like-button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+ }
+ .unliked-icon{
+    color:rgb(170, 170, 170);
+ }
+ .liked-icon{
+    color: red;
+    /* background-color: red; */
+ }
+ .text , .like{
+    font-weight: 500;
+ }
+ .time{
+
+    opacity: .8;
+    color: lightgray;
+    font-size: 1.2rem;
+    padding-left: 2.5rem;
+ }
+ .mainDashboard{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+ }

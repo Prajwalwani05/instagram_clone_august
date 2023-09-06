@@ -2,6 +2,10 @@ import React , {useState , useContext ,useEffect} from 'react';
 import axios from 'axios';
 import TokenContext from '../context/TokenContext';
 import { useNavigate } from 'react-router-dom';
+import "./auth.css";
+import image from "./Navbar/Image/instaText.png";
+import image2 from "./Navbar/Image/image2.jpg"
+import { NavLink } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -16,12 +20,6 @@ const Signup = () => {
   let {token , setToken} = useContext(TokenContext);
   let navigate = useNavigate();
 
-  useEffect(()=>{
-    if(localStorage.getItem('token')){
-      navigate('/dashboard')
-    }
-  },[])
-  
   const {name, email, password, cPassword} = user;
 
   const handleSignup = (e) =>{
@@ -41,8 +39,8 @@ const Signup = () => {
       setSuccess("");
       return;
     }
-    else if(password.length <= 8){
-      setError('Password must be at least 8 characters');
+    else if(password.length < 6){
+      setError('Password must be at least 6 characters');
       setSuccess("");
       return;
     }
@@ -81,16 +79,30 @@ const Signup = () => {
 
 
   return (
+    <>
+    <div className='mainLoginPage'>
+    <div className='loginContainer'>
+    <div className='image2Div'>
+        <img src={image2} /> 
+   </div>
     <div className='signup'>
-      <h1>Signup</h1>
-      <input type='text' placeholder='Name' onChange={(e)=>{setUser({...user , name:e.target.value})}} />
-      <input type='email' placeholder='Email' onChange={(e)=>{setUser({...user , email:e.target.value})}}/>
-      <input type='password' placeholder='Password' onChange={(e)=>{setUser({...user , password:e.target.value})}}/>
-      <input type='password' placeholder='Confirm Password' onChange={(e)=>{setUser({...user , cPassword:e.target.value})}}/>
-      <button onClick={handleSignup}>Signup</button>
-      { error && <p>{error}</p>}
-      {success && <p>{success}</p>}
+    <div className='imageDiv lessMargin'><img src={image} /></div>
+      <div className='inputDiv lessMargin'>
+      <input type='text' placeholder='Name' onChange={(e)=>{setUser({...user , name:e.target.value})}} /><br />
+      <input type='email' placeholder='Email' onChange={(e)=>{setUser({...user , email:e.target.value})}}/><br />
+      <input type='password' placeholder='Password' onChange={(e)=>{setUser({...user , password:e.target.value})}}/><br />
+      <input type='password' placeholder='Confirm Password' onChange={(e)=>{setUser({...user , cPassword:e.target.value})}}/><br />
+      </div>
+      { error && <p className='error'>{error}</p>}
+      {success && <p className='success'>{success}</p>}
+      <button className='signupBtn lessMargin' onClick={handleSignup}>Signup</button>
+
+      <p className='orSign lessMargin'>OR</p>
+        <p>Already have an account? <NavLink to="/login">Log In</NavLink> </p>
     </div>
+    </div>
+    </div>
+    </>
   )
 }
 

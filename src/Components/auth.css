@@ -1,0 +1,103 @@
+.mainLoginPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    & .image1Div img{
+        width: 27rem;
+        border: 5px solid;
+        border-color:#d6249f;
+        object-fit: cover;
+        object-position: center;
+        /* border-radius: 10px; */
+        opacity: .9;
+    }
+}
+.login , .signup{
+    /* border: 1px solid lime; */
+    text-align: center;
+    & .imageDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        & img{
+            width: 12rem;
+            filter: brightness(20);
+        }
+    }
+    & .inputDiv{
+        padding:1rem 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    
+    .or{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+}
+input{
+    margin-bottom: 1.2rem;
+    width: 30rem;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    border: 1px solid gray;
+    font-size: 1.3rem;
+    color: white;
+}
+.logInBtn , .signupBtn{
+    width: 30rem;
+    border-radius: 5px;
+    /* background-color: rgb(25, 55, 206); */
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    border:none;
+    cursor: pointer;
+    padding: .2rem;
+    font-size: 1.5rem;
+    /* color: white; */
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.lessMargin{
+    padding: .5rem !important;
+    margin-bottom: .2rem !important;
+}
+.image2Div img{
+    opacity: .9;
+    width: 38rem;
+    object-fit:cover;
+    object-position: center;
+    height: 42rem;
+    border: 5px solid #d6249f;
+}
+.orSign{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+a{
+    color: #5790e6;
+    text-decoration: none;
+}
+.error{
+    color: red;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.success{
+    color: limegreen;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}

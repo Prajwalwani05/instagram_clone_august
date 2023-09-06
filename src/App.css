@@ -10,6 +10,13 @@
 }
 body{
   font-size: 1.6rem;
-  background-color: #13131A;
+  /* background-color: #13131A; */
+  background-color: black;
   color: #F5F0F0;
+  /* background-color: pink;
+  color: crimson; */
+}
+.a{
+  color: rgb(8, 8, 8);
+  font-weight: 700;
 }
